@@ -22,8 +22,30 @@ int main(){
 	printf("A variável aleatória representa a contagem dos números de sucessos nas tentativas: (x)");
 	scanf("%d", &x);
 	
-	printf("%d, %.2lf, %.2lf, %d", x, p, q, n);
+	int nFatorial = 1;
 	
-
+	for(int i = n; i > 1 ; i--){
+		nFatorial = nFatorial * i;
+	}
+	
+	int xFatorial = 1;
+			
+	for(int i = x; i > 1 ; i--){
+		xFatorial = xFatorial * i;
+	}
+	
+	int nx = n - x;
+	
+	int nxFatorial = 1;
+			
+	for(int i = nx; i > 1 ; i--){
+		nxFatorial = nxFatorial * i;
+	}
+	
+	
+	
+	
+	
+	
 	
 }
