@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main(){
 	
@@ -11,15 +12,15 @@ int main(){
 	int n, x;
 	double p;
 
-	printf("O número de vezes que uma tentativa é repetida: (n)");
+	printf("O número de vezes que uma tentativa é repetida: (n)\n");
 	scanf("%d",&n);
 	
-	printf("A probabilidade de sucesso de uma única tentativa: (p)");
+	printf("A probabilidade de sucesso de uma única tentativa: (p)\n");
 	scanf("%lf", &p);
 	
 	double q = 1 - p;
 	
-	printf("A variável aleatória representa a contagem dos números de sucessos nas tentativas: (x)");
+	printf("A variável aleatória representa a contagem dos números de sucessos nas tentativas: (x)\n");
 	scanf("%d", &x);
 	
 	int nFatorial = 1;
@@ -42,10 +43,8 @@ int main(){
 		nxFatorial = nxFatorial * i;
 	}
 	
+	double resultado = (nFatorial / (nxFatorial * xFatorial) * pow(p,x) * pow(q,nx)) * 100;
 	
-	
-	
-	
-	
-	
+	printf("Resultado: %.4lf", resultado);
+		
 }
